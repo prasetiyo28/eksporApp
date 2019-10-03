@@ -1,3 +1,5 @@
+import 'dart:ui' as prefix0;
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +25,17 @@ class _MyAppState extends State<MyApp> {
               'assets/building.jpg',
               width: size.width,
               height: size.height,
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            child: BackdropFilter(
+              filter: prefix0.ImageFilter.blur(sigmaX: 5, sigmaY: 6),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.2),
+                )
+              ),
             ),
           ),
           Container(
@@ -42,6 +54,12 @@ class _MyAppState extends State<MyApp> {
                   ButtonTheme(
                     buttonColor: Colors.amber,
                     child: RaisedButton(
+                      padding: EdgeInsets.only(right: 80, left: 80),
+                      
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)
+                        
+                      ),
                       onPressed: () {},
                       child: Text(
                         "Mulai",
