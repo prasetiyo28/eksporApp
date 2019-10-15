@@ -1,28 +1,12 @@
+import 'package:flutter/material.dart';
 import 'dart:ui' as prefix0;
 
-import 'package:ekspor_apps/home.dart';
-import 'package:ekspor_apps/incosub.dart';
-import 'package:ekspor_apps/incoterms.dart';
-import 'package:ekspor_apps/komoditi.dart';
-import 'package:ekspor_apps/negara.dart';
-import 'package:ekspor_apps/organisasi.dart';
-import 'package:ekspor_apps/sales.dart';
-import 'package:ekspor_apps/selamat.dart';
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(new MaterialApp(
-    
-    home: new IncoSub()
-  ));
-}
-
-class MyApp extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _HomeState createState() => _HomeState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
