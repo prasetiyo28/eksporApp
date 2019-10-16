@@ -1,3 +1,4 @@
+import 'package:ekspor_apps/incosub.dart';
 import 'package:flutter/material.dart';
 
 class Incoterms extends StatefulWidget {
@@ -6,8 +7,11 @@ class Incoterms extends StatefulWidget {
 }
 
 class _IncotermsState extends State<Incoterms> {
+  final String text = '';
   @override
+  
   Widget build(BuildContext context) {
+    
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
@@ -45,39 +49,57 @@ class _IncotermsState extends State<Incoterms> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          RaisedButton(onPressed: () {}, child: Text("EXW")),
+                          RaisedButton(onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'EXW')));
+                          }, child: Text("EXW")),
                           Padding(
                             padding: const EdgeInsets.all(15),
                             child: RaisedButton(
-                                onPressed: () {}, child: Text("FCA")),
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'FCA')));
+                                }, child: Text("FCA")),
                           ),
-                          RaisedButton(onPressed: () {}, child: Text("CPT")),
+                          RaisedButton(onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'CPT')));
+                          }, child: Text("CPT")),
                         ],
                       ),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          RaisedButton(onPressed: () {}, child: Text("CIP")),
+                          RaisedButton(onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'CIP')));
+                          }, child: Text("CIP")),
                           Padding(
                             padding: const EdgeInsets.all(15),
                             child: RaisedButton(
-                                onPressed: () {}, child: Text("DAT")),
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'DAT')));
+                                }, child: Text("DAT")),
                           ),
-                          RaisedButton(onPressed: () {}, child: Text("DAP")),
+                          RaisedButton(onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'DAP')));
+                          }, child: Text("DAP")),
                         ],
                       ),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          RaisedButton(onPressed: () {}, child: Text("DDP")),
+                          RaisedButton(onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'DDP')));
+                          }, child: Text("DDP")),
                           Padding(
                             padding: const EdgeInsets.all(15),
                             child: RaisedButton(
-                                onPressed: () {}, child: Text("FAS")),
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'FAS')));
+                                }, child: Text("FAS")),
                           ),
-                          RaisedButton(onPressed: () {}, child: Text("FOB")),
+                          RaisedButton(onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'FOB')));
+                          }, child: Text("FOB")),
                         ],
                       ),
 
@@ -88,7 +110,9 @@ class _IncotermsState extends State<Incoterms> {
                           Padding(
                             padding: const EdgeInsets.all(15),
                             child: RaisedButton(
-                                onPressed: () {}, child: Text("CIF")),
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>IncoSub(text: 'CIF')));
+                                }, child: Text("CIF")),
                           ),
                           
                         ],

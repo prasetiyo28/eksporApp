@@ -45,7 +45,10 @@ flutter:
   - assets/building.jpg
   - assets/incoSub.jpeg
   - assets/incoterms.jpg
-
+  - assets/advanPayment.jpeg
+  - assets/lc.jpg
+  - assets/pembayaran.jpg
+  
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
