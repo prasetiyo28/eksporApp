@@ -44,10 +44,45 @@ flutter:
   assets:
   - assets/building.jpg
   - assets/incoSub.jpeg
+  - assets/sepakat.jpeg
+  - assets/transportasi.jpeg
+  - assets/udara.jpeg
+  - assets/laut.jpeg
+  - assets/produksiBarang.gif
+  - assets/pembayaran.jpg
   - assets/incoterms.jpg
   - assets/advanPayment.jpeg
   - assets/lc.jpg
-  - assets/pembayaran.jpg
+  - assets/emas.jpeg
+  - assets/batubara.jpeg
+  - assets/karet.jpeg
+  - assets/kayu.jpeg
+  - assets/minyak.jpeg
+  - assets/mobil.jpeg
+  - assets/perhiasan.jpeg
+  - assets/tembaga.jpeg
+  - assets/australia.jpeg
+  - assets/belanda.jpg
+  - assets/china.jpeg
+  - assets/india.jpg
+  - assets/jepang.jpeg
+  - assets/korea.jpeg
+  - assets/pakistan.jpg
+  - assets/singapura.jpeg
+  - assets/ACFTA.jpg
+  - assets/AFTA.png
+  - assets/AKFTA.jpg
+  - assets/IJEPA.jpg
+  - assets/selamat.jpg
+  - assets/sign.jpg
+  - assets/dok.jpeg
+  - assets/dok1.jpeg
+  - assets/dok2.jpeg
+  - assets/dok3.jpeg
+  - assets/dok4.jpeg
+  - assets/dok5.jpeg
+  - assets/dok6.jpeg
+
   
   
 

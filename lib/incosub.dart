@@ -1,3 +1,4 @@
+import 'package:ekspor_apps/sales.dart';
 import 'package:flutter/material.dart';
 
 class IncoSub extends StatefulWidget {
@@ -149,7 +150,9 @@ class _IncoSubState extends State<IncoSub> {
 
             Padding(
               padding: const EdgeInsets.only(top: 50),
-              child: RaisedButton(onPressed: (){},child: Text("Mengerti"),),
+              child: RaisedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Sales()));
+              },child: Text("Mengerti"),),
             )
            
           ],

@@ -1,14 +1,16 @@
+import 'package:ekspor_apps/laut.dart';
 import 'package:ekspor_apps/pembayaran.dart';
+import 'package:ekspor_apps/udara.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:ui' as prefix0;
-class Metode extends StatefulWidget {
+class Transportasi extends StatefulWidget {
   @override
-  _MetodeState createState() => _MetodeState();
+  _TransportasiState createState() => _TransportasiState();
 }
 
-class _MetodeState extends State<Metode> {
+class _TransportasiState extends State<Transportasi> {
   @override
   Widget build(BuildContext context) {
     final String text = '';
@@ -22,7 +24,7 @@ class _MetodeState extends State<Metode> {
           children: <Widget>[
             Center(
             child: new Image.asset(
-              'assets/pembayaran.jpg',
+              'assets/transportasi.jpeg',
               width: size.width,
               height: size.height,
               fit: BoxFit.cover,
@@ -41,29 +43,24 @@ class _MetodeState extends State<Metode> {
           ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[Text("Pembayaran",textAlign: TextAlign.center,style: TextStyle(fontSize: 50),),
+              children: <Widget>[Text("Transportasi",textAlign: TextAlign.center,style: TextStyle(fontSize: 50,color: Colors.white),),
             Align(
               alignment: Alignment.center,
                             child: Column( children: <Widget>[
                 
                 Padding(
                 padding: const EdgeInsets.only(top: 120,left: 30,right: 30,bottom: 30),
-                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Letter of Credit"),onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'LOC')));
+                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Lewat Udara"),onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Udara()));
                 },)),
               ),
               Padding(
                 padding: const EdgeInsets.all(30.0),
-                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Open Account"),onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'OA')));
+                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Lewat Laut"),onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Laut()));
                 },)),
               ),
-              Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Advance Payment"),onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'AP')));
-                },)),
-              ),
+             
               
               ],),
             )],

@@ -1,3 +1,4 @@
+import 'package:ekspor_apps/negara.dart';
 import 'package:flutter/material.dart';
 
 class Komoditi extends StatefulWidget {
@@ -59,26 +60,45 @@ class _KomoditiState extends State<Komoditi> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.asset('assets/building.jpg', height: 150,width: 150,),
-            Image.asset('assets/building.jpg', height: 150, width: 150),
+            RaisedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Negara()));
+            }, child: Image.asset('assets/emas.jpeg', height: 150,width: 150,fit: BoxFit.fitWidth)),
+            RaisedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Negara()));
+            }, child: Image.asset('assets/kayu.jpeg', height: 150, width: 150)),
           ],
         ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('assets/building.jpg', height: 150,width: 150,),
-            Image.asset('assets/building.jpg', height: 150, width: 150),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              RaisedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Negara()));
+              }, child: Image.asset('assets/batubara.jpeg', height: 150,width: 150,fit: BoxFit.fitHeight)),
+              RaisedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Negara()));
+              }, child: Image.asset('assets/minyak.jpeg', height: 150, width: 150,fit: BoxFit.fitWidth)),
+            ],
+          ),
         ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('assets/building.jpg', height: 150,width: 150,),
-            Image.asset('assets/building.jpg', height: 150, width: 150),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              RaisedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Negara()));
+              }, child: Image.asset('assets/karet.jpeg', height: 150,width: 150,fit: BoxFit.fitHeight)),
+              RaisedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Negara()));
+              }, child: Image.asset('assets/tembaga.jpeg', height: 150, width: 150)),
+            ],
+          ),
         ),
+         
           ],
         )
         ));

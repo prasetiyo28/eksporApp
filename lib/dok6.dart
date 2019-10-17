@@ -2,12 +2,12 @@ import 'package:ekspor_apps/sales.dart';
 import 'package:flutter/material.dart';
 
 
-class Selamat extends StatefulWidget {
+class Dok6 extends StatefulWidget {
   @override
-  _SelamatState createState() => _SelamatState();
+  _Dok6State createState() => _Dok6State();
 }
 
-class _SelamatState extends State<Selamat> {
+class _Dok6State extends State<Dok6> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -16,7 +16,7 @@ class _SelamatState extends State<Selamat> {
         children: <Widget>[
           Center(
             child: new Image.asset(
-              'assets/selamat.jpg',
+              'assets/dok6.jpeg',
               width: size.width,
               height: size.height,
               fit: BoxFit.cover,
@@ -27,18 +27,13 @@ class _SelamatState extends State<Selamat> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  Text(
-                    "Selamat Anda\nMenemukan Pembeli",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 30, color: Colors.white),
-                  ),
-                  SizedBox(height: 30),
+                  
                   Padding(
                     padding: const EdgeInsets.only(right: 40),
                     child: Align(
-                      alignment: Alignment.bottomRight,
+                      alignment: Alignment.bottomCenter,
                       child: ButtonTheme(
-                        buttonColor: Colors.amber,
+                        buttonColor: Colors.white,
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
@@ -48,7 +43,7 @@ class _SelamatState extends State<Selamat> {
                           child: Text(
                             "Lanjut",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white, fontSize: 20),
+                            style: TextStyle(color: Colors.black, fontSize: 20),
                           ),
                         ),
                       ),

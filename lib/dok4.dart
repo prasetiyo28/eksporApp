@@ -1,13 +1,15 @@
 import 'package:ekspor_apps/sales.dart';
 import 'package:flutter/material.dart';
 
+import 'dok5.dart';
 
-class Selamat extends StatefulWidget {
+
+class Dok4 extends StatefulWidget {
   @override
-  _SelamatState createState() => _SelamatState();
+  _Dok4State createState() => _Dok4State();
 }
 
-class _SelamatState extends State<Selamat> {
+class _Dok4State extends State<Dok4> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -16,7 +18,7 @@ class _SelamatState extends State<Selamat> {
         children: <Widget>[
           Center(
             child: new Image.asset(
-              'assets/selamat.jpg',
+              'assets/dok4.jpeg',
               width: size.width,
               height: size.height,
               fit: BoxFit.cover,
@@ -27,28 +29,23 @@ class _SelamatState extends State<Selamat> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  Text(
-                    "Selamat Anda\nMenemukan Pembeli",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 30, color: Colors.white),
-                  ),
-                  SizedBox(height: 30),
+                  
                   Padding(
                     padding: const EdgeInsets.only(right: 40),
                     child: Align(
-                      alignment: Alignment.bottomRight,
+                      alignment: Alignment.bottomCenter,
                       child: ButtonTheme(
-                        buttonColor: Colors.amber,
+                        buttonColor: Colors.white,
                         child: RaisedButton(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Sales()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Dok5()));
                           },
                           child: Text(
                             "Lanjut",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.white, fontSize: 20),
+                            style: TextStyle(color: Colors.black, fontSize: 20),
                           ),
                         ),
                       ),

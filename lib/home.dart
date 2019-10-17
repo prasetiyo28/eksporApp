@@ -1,3 +1,4 @@
+import 'package:ekspor_apps/komoditi.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as prefix0;
 
@@ -53,7 +54,9 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(5)
                         
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Komoditi()));
+                      },
                       child: Text(
                         "Mulai",
                       
