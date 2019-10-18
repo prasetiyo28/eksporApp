@@ -1,3 +1,4 @@
+import 'package:ekspor_apps/kemen.dart';
 import 'package:ekspor_apps/sales.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class _Dok5State extends State<Dok5> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Dok6()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Kemen()));
                           },
                           child: Text(
                             "Lanjut",

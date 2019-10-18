@@ -29,64 +29,13 @@ class _PembayaranState extends State<Pembayaran> {
   }else {
     title = 'Open Account';
     contents = 'Open Account adalah sistem pembayaran dimana belum dilakukan pembayaran apa-apa oleh importir kepada eksportir sebelum barang dikapalkan atau tiba dan diterima importir atau sebelum waktu tertentu yang telah disepakati.';
-    image = 'assets/advanPayment.jpg';
+    image = 'assets/advanPayment.jpeg';
   }
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        drawer: Drawer(
-            child: ListView(
-          children: <Widget>[
-            Row(
-              children: <Widget>[Icon(Icons.calendar_today), Text("Simulasi")],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("Incoterms"),
-              ],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("Pembayaran"),
-              ],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("Dokumen"),
-              ],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("FTA"),
-              ],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("Exit"),
-              ],
-            )
-          ],
-        )),
+        
         appBar: AppBar(
+          backgroundColor: Colors.orange,
           title: Text("Pembayaran"),
         ),
         body: Container(
@@ -110,9 +59,12 @@ class _PembayaranState extends State<Pembayaran> {
 
             Padding(
               padding: const EdgeInsets.only(top: 50),
-              child: RaisedButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Produksi()));
-              },child: Text("Mengerti"),),
+              child: ButtonTheme(
+                buttonColor: Colors.amber,
+                              child: RaisedButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Produksi()));
+                },child: Text("Mengerti",style: TextStyle(fontSize: 20, color: Colors.white),),),
+              ),
             )
            
           ],

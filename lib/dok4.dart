@@ -1,3 +1,4 @@
+import 'package:ekspor_apps/peb.dart';
 import 'package:ekspor_apps/sales.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,7 @@ class _Dok4State extends State<Dok4> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Dok5()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Peb()));
                           },
                           child: Text(
                             "Lanjut",

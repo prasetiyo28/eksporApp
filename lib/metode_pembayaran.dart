@@ -33,7 +33,7 @@ class _MetodeState extends State<Metode> {
               filter: prefix0.ImageFilter.blur(sigmaX: 5, sigmaY: 6),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.2),
+                  color: Colors.black.withOpacity(0.4),
 
                 )
               ),
@@ -41,28 +41,38 @@ class _MetodeState extends State<Metode> {
           ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[Text("Pembayaran",textAlign: TextAlign.center,style: TextStyle(fontSize: 50),),
+              children: <Widget>[Text("Pembayaran",textAlign: TextAlign.center,style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold,color: Colors.white),),
             Align(
               alignment: Alignment.center,
                             child: Column( children: <Widget>[
                 
                 Padding(
                 padding: const EdgeInsets.only(top: 120,left: 30,right: 30,bottom: 30),
-                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Letter of Credit"),onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'LOC')));
-                },)),
+                child: SizedBox(width: double.infinity,child: ButtonTheme(
+                  buttonColor: Colors.amber,
+                                  child: RaisedButton(child: Text("Letter of Credit",style: TextStyle(fontSize: 20, color: Colors.white)),onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'LOC')));
+                  },),
+                )),
               ),
               Padding(
                 padding: const EdgeInsets.all(30.0),
-                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Open Account"),onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'OA')));
-                },)),
+                child: SizedBox(width: double.infinity,child: ButtonTheme(
+                  buttonColor: Colors.amber,
+
+                                  child: RaisedButton(child: Text("Open Account",style: TextStyle(fontSize: 20, color: Colors.white),),onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'OA')));
+                  },),
+                )),
               ),
               Padding(
                 padding: const EdgeInsets.all(30.0),
-                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Advance Payment"),onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'AP')));
-                },)),
+                child: SizedBox(width: double.infinity,child: ButtonTheme(
+                  buttonColor: Colors.amber,
+                                  child: RaisedButton(child: Text("Advance Payment",style: TextStyle(fontSize: 20, color: Colors.white),),onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Pembayaran(text: 'AP')));
+                  },),
+                )),
               ),
               
               ],),

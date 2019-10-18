@@ -31,7 +31,7 @@ class _IncotermsState extends State<Incoterms> {
                 Text(
                   "INCOTERMS",
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10),

@@ -1,34 +1,19 @@
-import 'package:ekspor_apps/dok4.dart';
-import 'package:ekspor_apps/sales.dart';
+import 'package:ekspor_apps/dok2.dart';
+import 'package:ekspor_apps/kontener.dart';
+import 'package:ekspor_apps/selamatBank.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as prefix0;
 
-import 'mulai.dart';
 
-class TransGet extends StatefulWidget {
-  final String text;
-  TransGet({Key key, @required this.text}) : super(key: key);
+class Pembiayaan extends StatefulWidget {
   @override
-  _TransGetState createState() => _TransGetState();
+  _PembiayaanState createState() => _PembiayaanState();
 }
 
-class _TransGetState extends State<TransGet> {
+class _PembiayaanState extends State<Pembiayaan> {
   @override
   Widget build(BuildContext context) {
-   var text = widget.text;
   
-  var title = '';
-  var contents = '';
-  var image = '';
-  if(text == 'L'){
-    title = 'Anda Mendapatkan \n Bill of Lading';
-    contents = 'Bill of Lading adalah dokumen pengangkutan barang yang di dalamnya memuat informasi lengkap mengenai nama pengirim, nama kapal, data muatan, pelabuhan muat dan pelabuhan bongkar, rincian freight dan cara pembayarannya, nama consignee atau pemesan, jumlah B/L original yang dikerluarkan dan tanggal dari penandatanganan.';
-    image = 'assets/laut.jpeg';
-  }else {
-    title = 'Anda Mendapatkan Airwayw of Bill';
-    contents = 'AWB adalah dokumen yang harus ada pada tiap pengangkutan udara. AWB juga berfungsi untuk pencairan sejumlah dana yang di buka oleh importer untuk seorang eksportir';
-    image = 'assets/udara.jpeg';
-  }
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
@@ -57,17 +42,18 @@ class _TransGetState extends State<TransGet> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    title,
+                    "Pembiayaan",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 30, color: Colors.white),
+                    style: TextStyle(fontSize: 30, color: Colors.white, fontWeight:FontWeight.bold),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       
-                      contents,
+                      "Pembiayaan Anda bisa mendapatkan pembiayaan ekspor dari bank,seperti\n1. Pre Shipment financing\n2. Post Shipment financing",
                       textAlign: TextAlign.center,
-                      style: TextStyle( color: Colors.white),
+                      style: TextStyle( color: Colors.white,fontSize: 24),
+                      
                     ),
                   ),
                   
@@ -80,10 +66,28 @@ class _TransGetState extends State<TransGet> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Dok4()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>SelamatBank()));
                         },
                         child: Text(
-                          "Mengerti",
+                          "Gunakan",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: ButtonTheme(
+                      buttonColor: Colors.amber,
+                      child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5)),
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Dok2()));
+                        },
+                        child: Text(
+                          "Abaikan",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),

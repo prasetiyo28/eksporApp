@@ -43,22 +43,28 @@ class _TransportasiState extends State<Transportasi> {
           ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[Text("Transportasi",textAlign: TextAlign.center,style: TextStyle(fontSize: 50,color: Colors.white),),
+              children: <Widget>[Text("Transportasi",textAlign: TextAlign.center,style: TextStyle(fontSize: 50,color: Colors.white,fontWeight: FontWeight.bold),),
             Align(
               alignment: Alignment.center,
                             child: Column( children: <Widget>[
                 
                 Padding(
                 padding: const EdgeInsets.only(top: 120,left: 30,right: 30,bottom: 30),
-                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Lewat Udara"),onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Udara()));
-                },)),
+                child: SizedBox(width: double.infinity,child: ButtonTheme(
+                  buttonColor: Colors.amber,
+                                  child: RaisedButton(child: Text("Lewat Udara",style: TextStyle(fontSize: 20, color: Colors.white),),onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Udara()));
+                  },),
+                )),
               ),
               Padding(
                 padding: const EdgeInsets.all(30.0),
-                child: SizedBox(width: double.infinity,child: RaisedButton(child: Text("Lewat Laut"),onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Laut()));
-                },)),
+                child: SizedBox(width: double.infinity,child: ButtonTheme(
+                  buttonColor: Colors.amber,
+                                  child: RaisedButton(child: Text("Lewat Laut",style: TextStyle(fontSize: 20, color: Colors.white),),onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Laut()));
+                  },),
+                )),
               ),
              
               

@@ -55,47 +55,48 @@ class _OrganisasiState extends State<Organisasi> {
     image = 'assets/australia.jpeg';
   }
     return Scaffold(
-        drawer: Drawer(
-            child: ListView(
-          children: <Widget>[
+        // drawer: Drawer(
+        //     child: ListView(
+        //   children: <Widget>[
             
-            Row(
-              children: <Widget>[Icon(Icons.calendar_today), Text("Simulasi")],
-            ),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("Incoterms"),
+        //     Row(
+        //       children: <Widget>[Icon(Icons.calendar_today), Text("Simulasi")],
+        //     ),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("Incoterms"),
 
-            ],),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("Pembayaran"),
+        //     ],),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("Pembayaran"),
 
-            ],),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("Dokumen"),
+        //     ],),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("Dokumen"),
 
-            ],),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("FTA"),
+        //     ],),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("FTA"),
 
-            ],),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("Exit"),
+        //     ],),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("Exit"),
 
-            ],)
+        //     ],)
 
-          ],
-        )),
+        //   ],
+        // )),
         appBar: AppBar(
+          backgroundColor: Colors.orange,
           title: Text("Perjanjian Dagang"),
         ),
         body: Container(child: Column(
@@ -114,9 +115,15 @@ class _OrganisasiState extends State<Organisasi> {
               child: Text(contents,textAlign: TextAlign.center,),
             ),
             SizedBox(height: 50,),
-            RaisedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Selamat()));
-            },child: Text("Mengerti"),)
+            ButtonTheme(
+              shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
+              buttonColor: Colors.amber,
+                          child: RaisedButton(onPressed: (){
+                
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Selamat()));
+              },child: Text("Mengerti",style: TextStyle(color: Colors.white, fontSize: 20),),),
+            )
 
           ],
         )

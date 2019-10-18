@@ -1,4 +1,5 @@
 import 'package:ekspor_apps/sales.dart';
+import 'package:ekspor_apps/selamatKirim.dart';
 import 'package:flutter/material.dart';
 
 
@@ -38,10 +39,10 @@ class _Dok6State extends State<Dok6> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Sales()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SelamatKirim()));
                           },
                           child: Text(
-                            "Lanjut",
+                            "Kirim Barang",
                             textAlign: TextAlign.center,
                             style: TextStyle(color: Colors.black, fontSize: 20),
                           ),

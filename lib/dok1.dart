@@ -1,5 +1,4 @@
-import 'package:ekspor_apps/dok2.dart';
-import 'package:ekspor_apps/sales.dart';
+import 'package:ekspor_apps/bank.dart';
 import 'package:flutter/material.dart';
 
 
@@ -39,7 +38,7 @@ class _Dok1State extends State<Dok1> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Dok2()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Bank()));
                           },
                           child: Text(
                             "Lanjut",

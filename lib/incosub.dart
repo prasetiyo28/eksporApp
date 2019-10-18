@@ -73,60 +73,61 @@ class _IncoSubState extends State<IncoSub> {
   }
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        drawer: Drawer(
-            child: ListView(
-          children: <Widget>[
-            Row(
-              children: <Widget>[Icon(Icons.calendar_today), Text("Simulasi")],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("Incoterms"),
-              ],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("Pembayaran"),
-              ],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("Dokumen"),
-              ],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("FTA"),
-              ],
-            ),
-            Divider(),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.calendar_today,
-                ),
-                Text("Exit"),
-              ],
-            )
-          ],
-        )),
+        // drawer: Drawer(
+        //     child: ListView(
+        //   children: <Widget>[
+        //     Row(
+        //       children: <Widget>[Icon(Icons.calendar_today), Text("Simulasi")],
+        //     ),
+        //     Divider(),
+        //     Row(
+        //       children: <Widget>[
+        //         Icon(
+        //           Icons.calendar_today,
+        //         ),
+        //         Text("Incoterms"),
+        //       ],
+        //     ),
+        //     Divider(),
+        //     Row(
+        //       children: <Widget>[
+        //         Icon(
+        //           Icons. calendar_today,
+        //         ),
+        //         Text("Pembayaran"),
+        //       ],
+        //     ),
+        //     Divider(),
+        //     Row(
+        //       children: <Widget>[
+        //         Icon(
+        //           Icons.calendar_today,
+        //         ),
+        //         Text("Dokumen"),
+        //       ],
+        //     ),
+        //     Divider(),
+        //     Row(
+        //       children: <Widget>[
+        //         Icon(
+        //           Icons.calendar_today,
+        //         ),
+        //         Text("FTA"),
+        //       ],
+        //     ),
+        //     Divider(),
+        //     Row(
+        //       children: <Widget>[
+        //         Icon(
+        //           Icons.calendar_today,
+        //         ),
+        //         Text("Exit"),
+        //       ],
+        //     )
+        //   ],
+        // )),
         appBar: AppBar(
+          backgroundColor: Colors.orange,
           title: Text("Incoterms"),
         ),
         body: Container(
@@ -150,9 +151,14 @@ class _IncoSubState extends State<IncoSub> {
 
             Padding(
               padding: const EdgeInsets.only(top: 50),
-              child: RaisedButton(onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>Sales()));
-              },child: Text("Mengerti"),),
+              child: ButtonTheme(
+                buttonColor: Colors.orange,
+                shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                              child: RaisedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Sales()));
+                },child: Text("Mengerti" , style: TextStyle(fontSize: 20,color: Colors.white),),),
+              ),
             )
            
           ],

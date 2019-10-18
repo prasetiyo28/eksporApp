@@ -11,52 +11,56 @@ class _NegaraState extends State<Negara> {
   Widget build(BuildContext context) {
     final String text = '';
     return Scaffold(
-        drawer: Drawer(
-            child: ListView(
-          children: <Widget>[
+        // drawer: Drawer(
+        //     child: ListView(
+        //   children: <Widget>[
             
-            Row(
-              children: <Widget>[Icon(Icons.calendar_today), Text("Simulasi")],
-            ),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("Incoterms"),
+        //     Row(
+        //       children: <Widget>[Icon(Icons.calendar_today), Text("Simulasi")],
+        //     ),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("Incoterms"),
 
-            ],),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("Pembayaran"),
+        //     ],),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("Pembayaran"),
 
-            ],),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("Dokumen"),
+        //     ],),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("Dokumen"),
 
-            ],),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("FTA"),
+        //     ],),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("FTA"),
 
-            ],),
-            Divider(),
-            Row(children: <Widget>[
-              Icon(Icons.calendar_today,),
-              Text("Exit"),
+        //     ],),
+        //     Divider(),
+        //     Row(children: <Widget>[
+        //       Icon(Icons.calendar_today,),
+        //       Text("Exit"),
 
-            ],)
+        //     ],)
 
-          ],
-        )),
+        //   ],
+        // )),
         appBar: AppBar(
-          title: Text("Komoditi"),
+          backgroundColor: Colors.orange,
+          title: Text("Negara"),
         ),
         body: Container(child: Column(
           children: <Widget>[
-            Text("Pilih Negara Tujuan Export Anda", style: TextStyle(fontSize: 25),textAlign: TextAlign.center,),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text("Pilih Negara Tujuan Export Anda", style: TextStyle(fontSize: 25),textAlign: TextAlign.center,),
+            ),
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: Row(

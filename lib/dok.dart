@@ -1,4 +1,5 @@
 import 'package:ekspor_apps/dok1.dart';
+import 'package:ekspor_apps/pribadi.dart';
 import 'package:ekspor_apps/sales.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,7 @@ class _DokState extends State<Dok> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Dok1()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Pribadi()));
                           },
                           child: Text(
                             "Lanjut",

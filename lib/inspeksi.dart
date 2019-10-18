@@ -1,34 +1,21 @@
-import 'package:ekspor_apps/dok4.dart';
-import 'package:ekspor_apps/sales.dart';
+import 'package:ekspor_apps/dok1.dart';
+import 'package:ekspor_apps/selamatSertifikat.dart';
+import 'package:ekspor_apps/selamatcomercial.dart';
+import 'package:ekspor_apps/selamatshipping.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as prefix0;
 
 import 'mulai.dart';
 
-class TransGet extends StatefulWidget {
-  final String text;
-  TransGet({Key key, @required this.text}) : super(key: key);
+class Inspeksi extends StatefulWidget {
   @override
-  _TransGetState createState() => _TransGetState();
+  _InspeksiState createState() => _InspeksiState();
 }
 
-class _TransGetState extends State<TransGet> {
+class _InspeksiState extends State<Inspeksi> {
   @override
   Widget build(BuildContext context) {
-   var text = widget.text;
   
-  var title = '';
-  var contents = '';
-  var image = '';
-  if(text == 'L'){
-    title = 'Anda Mendapatkan \n Bill of Lading';
-    contents = 'Bill of Lading adalah dokumen pengangkutan barang yang di dalamnya memuat informasi lengkap mengenai nama pengirim, nama kapal, data muatan, pelabuhan muat dan pelabuhan bongkar, rincian freight dan cara pembayarannya, nama consignee atau pemesan, jumlah B/L original yang dikerluarkan dan tanggal dari penandatanganan.';
-    image = 'assets/laut.jpeg';
-  }else {
-    title = 'Anda Mendapatkan Airwayw of Bill';
-    contents = 'AWB adalah dokumen yang harus ada pada tiap pengangkutan udara. AWB juga berfungsi untuk pencairan sejumlah dana yang di buka oleh importer untuk seorang eksportir';
-    image = 'assets/udara.jpeg';
-  }
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
@@ -57,17 +44,17 @@ class _TransGetState extends State<TransGet> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    title,
+                    "Perusahaan Inspeksi",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 30, color: Colors.white),
+                    style: TextStyle(fontSize: 30, color: Colors.white, fontWeight:FontWeight.bold),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      
-                      contents,
+                      "Di perusahaan inspeksi anda mendapatkan Sertifikat kelayakan produk, untuk membuktikan bahwa produk anda layak diperjualbelikan.",
                       textAlign: TextAlign.center,
-                      style: TextStyle( color: Colors.white),
+                      style: TextStyle( color: Colors.white,fontSize: 24),
+                      
                     ),
                   ),
                   
@@ -80,10 +67,10 @@ class _TransGetState extends State<TransGet> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Dok4()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>SelamatSertifikat()));
                         },
                         child: Text(
-                          "Mengerti",
+                          "Dapatkan",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
